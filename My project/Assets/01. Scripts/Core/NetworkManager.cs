@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,26 +26,32 @@ public class NetworkManager
 
     // Uniform Resource Locator
     // Uniform Resource Indicator
-    public void GetRequest(string uri, string query)
+    public void GetRequest(string uri, string query, Action<MessageType, string> Callback)
     {
-        GameManager.Instance.StartCoroutine(GetCoroutine(uri, query));
+        GameManager.Instance.StartCoroutine(GetCoroutine(uri, query, Callback));
     }
 
-    private IEnumerator GetCoroutine(string uri, string query)
+    private IEnumerator GetCoroutine(string uri, string query, Action<MessageType, string> Callback)
     {
         string url = $"{_host}:{_port}/{uri}{query}";
         UnityWebRequest req = UnityWebRequest.Get(url);
         // 해당 url 로 웹브라우저 주소창에 친거랑 동일한 짓을 한다.
 
-        yield return req.SendWebRequest();      // 뭐든 받아옴
+        Debug.Log(url);
+
+        yield return req.SendWebRequest();      // 받아옴
+
+        Debug.Log(req);
 
         if (req.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log(url);
-            Debug.LogError($"{req.responseCode}_Error on Get");
+            Callback?.Invoke(MessageType.ERROR, $"{req.responseCode}_Error on Get");
             yield break;
         }
 
-        Debug.Log(req.downloadHandler.text);
+        // 클래스로 따야함
+        MessageDTO msg = JsonUtility.FromJson<MessageDTO>(req.downloadHandler.text);
+        //Debug.Log(req.downloadHandler.text);
+        Callback?.Invoke(msg.type, msg.message);
     }
 }
