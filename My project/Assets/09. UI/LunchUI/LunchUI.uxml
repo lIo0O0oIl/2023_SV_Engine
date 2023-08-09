@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/09.%20UI/common.uss?fileID=7433441132597879392&amp;guid=87cede7a11705aa47b5763a36b6370ae&amp;type=3#common" />
-    <ui:VisualElement name="LunchContainer" style="flex-grow: 0; background-color: rgb(255, 255, 255); width: 500px; height: 400px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px;">
+    <ui:VisualElement name="LunchContainer" class="window fade" style="flex-grow: 0; background-color: rgb(255, 255, 255); width: 500px; height: 400px; border-top-left-radius: 15px; border-bottom-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px;">
         <ui:VisualElement name="Header" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-basis: 60px; flex-direction: row; padding-left: 15px; padding-right: 15px; padding-top: 5px; padding-bottom: 5px;">
             <ui:TextField picking-mode="Ignore" name="DateTextField" style="flex-direction: row; flex-grow: 1;" />
             <ui:Button text="Load" display-tooltip-when-elided="true" name="LoadBtn" class="btn" />

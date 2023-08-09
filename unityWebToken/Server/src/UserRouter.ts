@@ -6,11 +6,13 @@ import { MessageType, ResponseMSG } from "./types";
 export const userRouter = Router();
 
 userRouter.get("/user/login", async (req:Request, res:Response) => {
-
+    // 이건 구현 안할꺼임
 });
 
 userRouter.post("/user/login", async (req:Request, res:Response) => {
+    let {email, password} : {email:string, password:string} = req.body;
 
+    console.log(email, password);
 });
 
 userRouter.get("/user/register", async (req:Request, res:Response) => {

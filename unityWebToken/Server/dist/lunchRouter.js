@@ -34,8 +34,8 @@ exports.lunchRouter.get("/lunch", (req, res) => __awaiter(void 0, void 0, void 0
         //let secDelta = arr2[0] - arr[0];
         //let nanoDelta = arr[1] - arr[1] + secDelta * 1000000000;        // tjdsmdcmrwjd zhem
         //res.render("lunch", json);
-        let resPactket = { type: types_1.MessageType.SUCCESS, message: JSON.stringify(json) };
-        res.json(resPactket);
+        let resPacket = { type: types_1.MessageType.SUCCESS, message: JSON.stringify(json) };
+        res.json(resPacket);
         return;
     }
     const url = `http://ggm.hs.kr/lunch.view?date=${date}`; // C#에서 $"" 랑 같은 역할          
@@ -51,8 +51,8 @@ exports.lunchRouter.get("/lunch", (req, res) => __awaiter(void 0, void 0, void 0
     //res.json({id:1, text:menus});
     // ejs, pug, nunjucks
     //res.render("lunch", json);
-    let resPactket = { type: types_1.MessageType.SUCCESS, message: JSON.stringify(json) };
-    res.json(resPactket);
+    let resPacket = { type: types_1.MessageType.SUCCESS, message: JSON.stringify(json) };
+    res.json(resPacket);
     yield DB_1.Pool.execute("INSERT INTO lunch(date, menu) VALUES(?, ?)", [date, JSON.stringify(menus)]);
 }));
 function GetDataFromDB(date) {

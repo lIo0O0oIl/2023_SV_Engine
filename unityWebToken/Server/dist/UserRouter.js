@@ -15,8 +15,11 @@ const DB_1 = require("./DB");
 const types_1 = require("./types");
 exports.userRouter = (0, express_1.Router)();
 exports.userRouter.get("/user/login", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    // 이건 구현 안할꺼임
 }));
 exports.userRouter.post("/user/login", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    let { email, password } = req.body;
+    console.log(email, password);
 }));
 exports.userRouter.get("/user/register", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.render("register");

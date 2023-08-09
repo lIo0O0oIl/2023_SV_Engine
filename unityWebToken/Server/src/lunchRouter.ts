@@ -27,8 +27,8 @@ lunchRouter.get("/lunch", async (req : Request, res : Response) => {
         //let secDelta = arr2[0] - arr[0];
         //let nanoDelta = arr[1] - arr[1] + secDelta * 1000000000;        // tjdsmdcmrwjd zhem
         //res.render("lunch", json);
-        let resPactket : ResponseMSG = {type: MessageType.SUCCESS, message: JSON.stringify(json)};
-        res.json(resPactket);
+        let resPacket : ResponseMSG = {type: MessageType.SUCCESS, message: JSON.stringify(json)};
+        res.json(resPacket);
         return;
     }
 
@@ -53,8 +53,8 @@ lunchRouter.get("/lunch", async (req : Request, res : Response) => {
 
     //res.render("lunch", json);
 
-    let resPactket : ResponseMSG = {type: MessageType.SUCCESS, message: JSON.stringify(json)};
-    res.json(resPactket);
+    let resPacket : ResponseMSG = {type: MessageType.SUCCESS, message: JSON.stringify(json)};
+    res.json(resPacket);
 
     await Pool.execute("INSERT INTO lunch(date, menu) VALUES(?, ?)", [date, JSON.stringify(menus)]);
 });

@@ -17,8 +17,39 @@
 }
 
 .btn:hover {
-    border-left-color: rgb(93, 198, 255);
-    border-right-color: rgb(93, 198, 255);
-    border-top-color: rgb(93, 198, 255);
-    border-bottom-color: rgb(93, 198, 255);
+    background-color: rgb(69, 140, 255);
+}
+
+.window {
+    transition-duration: 0.7s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+.fade {
+    opacity: 0.1;
+    position: absolute;
+    top: 120%;
+}
+.msg {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition-property: translate;
+    transition-duration: 0.5s;
+}
+
+.msg.off {
+    translate: 110% 0;
+    opacity: 0.2;
 }
