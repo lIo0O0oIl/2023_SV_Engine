@@ -1,6 +1,8 @@
 import express, { Application, Request, Response } from "express";                                                                      
 import nunjucks from 'nunjucks';
 
+// 미들웨어 가져오기
+import { tokenChecker } from "./MyJWT";
 // 라우터 가져오기
 import {lunchRouter} from "./lunchRouter";
 import {userRouter} from "./UserRouter";
@@ -13,6 +15,8 @@ nunjucks.configure("views", {express:app, watch:true});
 
 app.use(express.json());    // post 로 들어온ㄴ 데이터들을 json 현태로 파싱해주겠다.
 app.use(express.urlencoded({extended:true}));
+
+app.use(tokenChecker);      // 토큰을 체크한다
 
 // Get, Post, Put, Delete  => Method
 // CRUD -> Create, Read, Update, Delete

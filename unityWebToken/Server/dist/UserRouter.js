@@ -13,13 +13,36 @@ exports.userRouter = void 0;
 const express_1 = require("express");
 const DB_1 = require("./DB");
 const types_1 = require("./types");
+const MyJWT_1 = require("./MyJWT");
 exports.userRouter = (0, express_1.Router)();
+exports.userRouter.get("/user", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    let resMsg = { type: types_1.MessageType.EMPTY, message: "로그인이 필요합니다." };
+    if (req.user != null) {
+        console.log(req.user);
+        resMsg = { type: types_1.MessageType.SUCCESS, message: JSON.stringify(req.user) };
+        res.json(resMsg);
+    }
+    else {
+        res.json(resMsg);
+    }
+}));
 exports.userRouter.get("/user/login", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     // 이건 구현 안할꺼임
 }));
 exports.userRouter.post("/user/login", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    let { email, password } = req.body;
-    console.log(email, password);
+    let { email: inputEmail, password } = req.body;
+    const sql = "SELECT * FROM users WHERE email = ? AND password = PASSWORD(?)";
+    let [row, col] = yield DB_1.Pool.query(sql, [inputEmail, password]);
+    //console.log(email, password);
+    if (row.length == 0) {
+        res.json({ type: types_1.MessageType.ERROR, message: "아이디 또는 비밀번호가 올바르지 않습니다." });
+        return;
+    }
+    let { id, email, name, exp } = row[0];
+    let user = { id, email, name, exp };
+    let token = (0, MyJWT_1.createJWT)(user);
+    //console.log(user);
+    res.json({ type: types_1.MessageType.SUCCESS, message: JSON.stringify({ token, user }) });
 }));
 exports.userRouter.get("/user/register", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.render("register");

@@ -5,6 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const nunjucks_1 = __importDefault(require("nunjucks"));
+// 미들웨어 가져오기
+const MyJWT_1 = require("./MyJWT");
 // 라우터 가져오기
 const lunchRouter_1 = require("./lunchRouter");
 const UserRouter_1 = require("./UserRouter");
@@ -14,6 +16,7 @@ app.set("view engine", "njk");
 nunjucks_1.default.configure("views", { express: app, watch: true });
 app.use(express_1.default.json()); // post 로 들어온ㄴ 데이터들을 json 현태로 파싱해주겠다.
 app.use(express_1.default.urlencoded({ extended: true }));
+app.use(MyJWT_1.tokenChecker); // 토큰을 체크한다
 // Get, Post, Put, Delete  => Method
 // CRUD -> Create, Read, Update, Delete
 // App;ication에서 CRUD 를 구현했다 : API

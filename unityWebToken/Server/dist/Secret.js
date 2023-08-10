@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.dbConfig = void 0;
+exports.JWT_SECRET = exports.dbConfig = void 0;
 exports.dbConfig = {
     user: "yy_40114",
     password: "1234",
@@ -8,3 +8,4 @@ exports.dbConfig = {
     host: "gondr99.iptime.org",
     port: 3306
 };
+exports.JWT_SECRET = "GGM[HIGHSCHOOL_WORLD_CLASS]";

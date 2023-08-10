@@ -5,5 +5,5 @@ var MessageType;
 (function (MessageType) {
     MessageType[MessageType["ERROR"] = 1] = "ERROR";
     MessageType[MessageType["SUCCESS"] = 2] = "SUCCESS";
-    MessageType[MessageType["ENPTY"] = 3] = "ENPTY";
+    MessageType[MessageType["EMPTY"] = 3] = "EMPTY";
 })(MessageType || (exports.MessageType = MessageType = {}));

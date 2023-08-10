@@ -30,7 +30,7 @@ public class LunchUI : WindowUI
             return;
         }
 
-        NetworkManager.Instence.GetRequest("lunch", $"?date={dateStr}", (type, json) =>
+        NetworkManager.Instance.GetRequest("lunch", $"?date={dateStr}", (type, json) =>
         {
             if (type == MessageType.SUCCESS)
             {

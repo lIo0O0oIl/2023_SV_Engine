@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+    public string Token { get; private set; }
+
     private void Awake()
     {
         if (Instance != null)
@@ -17,7 +19,13 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
 
-        NetworkManager.Instence = new NetworkManager(_host, _port);
+        NetworkManager.Instance = new NetworkManager(_host, _port);
+
+        Token = PlayerPrefs.GetString(LoginUI.TokenKey, defaultValue:string.Empty);
+        if (string.IsNullOrEmpty(Token))
+        {
+            NetworkManager.Instance.DoAuth();
+        }
     }
 
     #region 디버그 코드
@@ -26,7 +34,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             // 콜백, async await
-            NetworkManager.Instence.GetRequest("lunch", "?date=20230704", (type, message) =>
+            NetworkManager.Instance.GetRequest("lunch", "?date=20230704", (type, message) =>
             {
                 if (type == MessageType.SUCCESS)
                 {
@@ -45,4 +53,10 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+
+    public void DestroyToken()
+    {
+        PlayerPrefs.DeleteKey(LoginUI.TokenKey);
+        Token = string.Empty;
+    }
 }
