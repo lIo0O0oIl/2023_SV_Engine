@@ -45,8 +45,7 @@ public class UserPopOver
     public void PopOver(Vector2 pos)
     {
         _root.style.top = new Length(pos.y, LengthUnit.Pixel);
-        _root.style.left = new Length(pos.y, LengthUnit.Pixel);
-
+        _root.style.left = new Length(pos.x, LengthUnit.Pixel);
         _root.transform.scale = new Vector3(1, 1, 1);
     }
 

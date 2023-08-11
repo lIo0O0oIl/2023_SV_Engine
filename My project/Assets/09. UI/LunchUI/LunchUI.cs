@@ -48,7 +48,8 @@ public class LunchUI : WindowUI
 
     private void OnCloseButtonHandle(ClickEvent evt)
     {
-        _root.RemoveFromHierarchy();        // 하이어라키에서 날 지워줘
-       // _root.AddToClassList("fade");       // ㅋㅋ
+        //_root.RemoveFromHierarchy();        // 하이어라키에서 날 지워줘
+         // _root.AddToClassList("fade");       // ㅋㅋ
+        Close();
     }
 }

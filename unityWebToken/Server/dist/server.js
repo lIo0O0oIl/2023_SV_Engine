@@ -10,6 +10,7 @@ const MyJWT_1 = require("./MyJWT");
 // 라우터 가져오기
 const lunchRouter_1 = require("./lunchRouter");
 const UserRouter_1 = require("./UserRouter");
+const InventoryRouter_1 = require("./InventoryRouter");
 // 익스프레스 어플리케이션은 웹서버임
 let app = (0, express_1.default)();
 app.set("view engine", "njk");
@@ -23,6 +24,7 @@ app.use(MyJWT_1.tokenChecker); // 토큰을 체크한다
 // URI에 get(Read), Post(Create), Put(Update), Delete
 // RestFul API (다 구현한 것. 기본이 되는)
 // 여기서 라우터 에 set 코드가 있었음
+app.use(InventoryRouter_1.invenRouter);
 // 점심관련 라우터
 app.use(lunchRouter_1.lunchRouter);
 // 유저관련 라우터

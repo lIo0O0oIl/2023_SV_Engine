@@ -7,7 +7,7 @@
             <ui:Button text="로그인" display-tooltip-when-elided="true" name="LoginBtn" class="btn" />
             <ui:VisualElement name="UserInfoPanel" class="widthzero" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; transform-origin: right; overflow: hidden; transition-property: width; transition-duration: 0.5s;">
                 <ui:Button text="유저인포" display-tooltip-when-elided="true" name="InfoBtn" class="btn" />
-                <ui:Button text="로그아웃" display-tooltip-when-elided="true" name="LogouttBtn" class="btn" />
+                <ui:Button text="로그아웃" display-tooltip-when-elided="true" name="LogoutBtn" class="btn" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Content" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: flex-start;" />

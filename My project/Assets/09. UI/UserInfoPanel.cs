@@ -28,19 +28,19 @@ public class UserInfoPanel
 
         root.Q<Button>("LogoutBtn").RegisterCallback<ClickEvent>(LogoutHandler);
 
-        UserPopOver = new UserPopOver(popOverElem);
-
-        _infoButton.RegisterCallback<MouseEnterEvent>(MouseEnterEvent =>
+        UserPopOver = new UserPopOver(popOverElem); //팝오버 창 보이게 하고
+        _infoButton.RegisterCallback<MouseEnterEvent>(evt =>
         {
             Rect rect = _infoButton.worldBound;
             Vector2 pos = rect.position;
             pos.y += rect.height + 10;
             UserPopOver.PopOver(pos);
         });
-        _infoButton.RegisterCallback<MouseLeaveEvent>(MouseLeaveEvent =>
+        _infoButton.RegisterCallback<MouseLeaveEvent>(evt =>
         {
             UserPopOver.Hide();
         });
+
     }
 
     public void Show(bool value)

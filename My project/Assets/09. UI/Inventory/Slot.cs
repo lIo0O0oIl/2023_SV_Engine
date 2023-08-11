@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Slot : MonoBehaviour
+public class Slot
 {
     private VisualElement _root;
     public int slotNumber;

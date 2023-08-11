@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Random = UnityEngine.Random;
 
 public enum Windows
 {
@@ -13,6 +14,8 @@ public enum Windows
 public class UIController : MonoBehaviour
 {
     public static UIController Instance;
+
+    public List<ItemSO> itemList;
 
     [SerializeField] private VisualTreeAsset _lunchUIAsset; //UI의 프리팹
     [SerializeField] private VisualTreeAsset _loginUIAsset; //UI의 프리팹
@@ -111,6 +114,17 @@ public class UIController : MonoBehaviour
             kvPair.Value.Close();
         }
         _windowDictionary[Windows.Inven].Open();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) //1번 숫자 누르면 아이템 추가되게
+        {
+            int idx = Random.Range(0, itemList.Count);
+
+            InventoryUI inven = _windowDictionary[Windows.Inven] as InventoryUI;
+            inven.AddItem(itemList[idx], 3);
+        }
     }
 
 
