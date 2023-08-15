@@ -22,8 +22,8 @@ public class MessageTemplate
     public MessageTemplate(VisualElement root, float timer)
     {
         _root = root;
-        _label = root.Q<Label>(name: "Message");
-        _currentTimer = timer;
+        _label = root.Q<Label>("Message");
+        _currentTimer = 0;
         _fade = false;
         _timer = timer;
     }

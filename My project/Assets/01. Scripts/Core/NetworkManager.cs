@@ -61,7 +61,7 @@ public class NetworkManager
     private IEnumerator PostCoroutine(string uri, PayLoad payload, Action<MessageType, string> Callback)
     {
         string url = $"{_host}:{_port}/{uri}";
-        Debug.Log(payload.GetJsonString());
+        //Debug.Log(payload.GetJsonString());
         //UnityWebRequest req = UnityWebRequest.Post(url, payload.GetJsonString(), "application/json");
 
         UnityWebRequest req = UnityWebRequest.Post(url, payload.GetWWWForm());
@@ -73,7 +73,8 @@ public class NetworkManager
 
         if (req.result != UnityWebRequest.Result.Success)
         {
-            UIController.Instance.Message.AddMessage($"요청이 실패했습니다. {req.responseCode} Error on post", 3f);
+            Debug.LogError(req.responseCode);
+            //UIController.Instance.Message.AddMessage($"요청이 실패했습니다. {req.responseCode} Error on post", 3f);
             yield break;
         }
 

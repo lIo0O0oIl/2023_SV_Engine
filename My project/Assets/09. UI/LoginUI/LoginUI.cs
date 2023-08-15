@@ -19,7 +19,6 @@ public class LoginUI : WindowUI
     }
 
     public const string TokenKey = "token";
-
     private void OnLoginBtnHandle(ClickEvent evt)
     {
         //입력값 검증이 들어가야해. 
@@ -41,6 +40,7 @@ public class LoginUI : WindowUI
             }
             else
             {
+                Debug.Log("로그인 안됨");
                 UIController.Instance.Message.AddMessage(json, 3f);
             }
             //Debug.Log(type);

@@ -132,6 +132,7 @@ public class InventoryUI : WindowUI
         if (!_root.ClassListContains("fade") && _isLoadedFromServer)
         {
             SaveToDB();
+            Debug.Log("저장한다.");
         }
         base.Close();
     }
