@@ -8,7 +8,7 @@ import {lunchRouter} from "./lunchRouter";
 import {userRouter} from "./UserRouter";
 import { invenRouter } from "./InventoryRouter";
 
-// 익스프레스 어플리케이션은 웹서버임
+// 익스프레스 어플리케이션 이건 웹서버임
 let app : Application = express();
 
 app.set("view engine", "njk");

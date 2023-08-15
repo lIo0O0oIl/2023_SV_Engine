@@ -8,4 +8,4 @@ exports.dbConfig = {
     host: "gondr99.iptime.org",
     port: 3306
 };
-exports.JWT_SECRET = "GGM[HIGHSCHOOL_WORLD_CLASS]";
+exports.JWT_SECRET = "GGM[WORLD_CLASS_OF_HIGHSCHOOL]";

@@ -8,4 +8,4 @@ export const dbConfig : mysql.PoolOptions = {
     port:3306
 };
 
-export const JWT_SECRET = "GGM[HIGHSCHOOL_WORLD_CLASS]";
+export const JWT_SECRET = "GGM[WORLD_CLASS_OF_HIGHSCHOOL]";

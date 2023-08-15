@@ -11,7 +11,7 @@ const MyJWT_1 = require("./MyJWT");
 const lunchRouter_1 = require("./lunchRouter");
 const UserRouter_1 = require("./UserRouter");
 const InventoryRouter_1 = require("./InventoryRouter");
-// 익스프레스 어플리케이션은 웹서버임
+// 익스프레스 어플리케이션 이건 웹서버임
 let app = (0, express_1.default)();
 app.set("view engine", "njk");
 nunjucks_1.default.configure("views", { express: app, watch: true });

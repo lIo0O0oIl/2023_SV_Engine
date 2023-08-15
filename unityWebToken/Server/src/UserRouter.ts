@@ -75,7 +75,6 @@ userRouter.post("/user/register", async (req:Request, res:Response) => {
     }
 
     // 데이터 베이스에 값 저장하기
-
-        let mag : ResponseMSG = {type:MessageType.SUCCESS, message: "로그인성공 ㅇ"};
-        res.json(mag);
+    let mag : ResponseMSG = {type:MessageType.SUCCESS, message: "로그인성공 ㅇ"};
+    res.json(mag);
 });
