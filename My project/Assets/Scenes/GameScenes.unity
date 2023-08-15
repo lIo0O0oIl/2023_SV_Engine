@@ -328,7 +328,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5051a6270b61c1a469df66897b5b4481, type: 2}
   - {fileID: 11400000, guid: f4ea14565ed64754caffa70314daa304, type: 2}
   _lunchUIAsset: {fileID: 9197481963319205126, guid: 6bf616719df6ec8489a98ea6c4b24c85, type: 3}
-  _loginUIAsset: {fileID: 9197481963319205126, guid: c8384bfc28061854fa71989997b040cd, type: 3}
+  _loginUIAsset: {fileID: 9197481963319205126, guid: 557c7e299b291644fbd35fabe884777c, type: 3}
   _invenUIAsset: {fileID: 9197481963319205126, guid: 684ddfdbda839d14ca21984b459ab40b, type: 3}
   _invenItemUIAsset: {fileID: 9197481963319205126, guid: 2501a6589024d5a44bb3464c02e00edc, type: 3}
 --- !u!114 &1747695504
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919c5c4109ec19443a71fcb905dc8eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _messageTemplate: {fileID: 9197481963319205126, guid: f3ed7376555693045a4fd61f766602d7, type: 3}
+  _messageTemplate: {fileID: 9197481963319205126, guid: 2077792e784103b4fac6a39870f22602, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -144,6 +144,7 @@ public class InventoryUI : WindowUI
         _itemDictionary.Clear();
         _slotList.ForEach(s => s.Elem.Clear());
 
+        // 이렇게 오픈마다 다 확인 해주어서 로그인, 로그아웃 후 런치도 눌르면 권한이 없습니다. 뜨는 것 같음
         NetworkManager.Instance.GetRequest("inven", "", (type, json) =>
         {
             if (type == MessageType.ERROR)

@@ -18,7 +18,7 @@ public class LoginUI : WindowUI
         _root.Q<Button>("CancelBtn").RegisterCallback<ClickEvent>(OnCancelBtnHandle);
     }
 
-    public const string TokenKey = "token";
+    public const string TokenKey = "token";         // 토큰 토큰 토큰
     private void OnLoginBtnHandle(ClickEvent evt)
     {
         //입력값 검증이 들어가야해. 
@@ -33,7 +33,7 @@ public class LoginUI : WindowUI
             {
                 TokenResponseDTO dto = JsonUtility.FromJson<TokenResponseDTO>(json);
                 PlayerPrefs.SetString(TokenKey, dto.token);
-                //Debug.Log(dto.token);
+                Debug.Log(dto.token);
                 // 로그인 창이 닫히고 위에가 변하도록
                 UIController.Instance.SetLogin(dto.user);
                 Close();

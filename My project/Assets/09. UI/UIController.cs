@@ -56,6 +56,7 @@ public class UIController : MonoBehaviour
 
         var popOverElem = root.Q<VisualElement>("UserPopOver");
         var userInfoElem = root.Q<VisualElement>("UserInfoPanel");
+        //_userInfoPanel = new UserInfoPanel(userInfoElem, popOverElem, e => SetLogout());
         _userInfoPanel = new UserInfoPanel(userInfoElem, popOverElem, e => SetLogout());
 
         Button invenBtn = root.Q<Button>("InventoryBtn");
@@ -140,6 +141,7 @@ public class UIController : MonoBehaviour
 
     public void SetLogout()
     {
+        Debug.Log("·Î±×¾Æ¿ôµÊ");
         _loginBtn.style.display = DisplayStyle.Flex;
         _userInfoPanel.Show(false);
         GameManager.Instance.DestroyToken();

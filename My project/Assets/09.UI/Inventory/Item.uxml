@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/09.UI/common.uss?fileID=7433441132597879392&amp;guid=f2dd791aa211b0e44bc7c4e2ddfd7a69&amp;type=3#common" />
+    <ui:VisualElement name="Item" class="item">
+        <ui:VisualElement name="Sprite" style="width: 64px; height: 64px; background-image: url(&apos;project://database/Assets/04.Sprites/%231%20-%20Transparent%20Icons.png?fileID=1584009161&amp;guid=dea508c41d705d34594e14ad05ead033&amp;type=3#1 - Transparent Icons_89&apos;);" />
+        <ui:Label tabindex="-1" text="10" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CountLabel" style="position: absolute; bottom: 5px; right: 5px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 25px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);" />
+    </ui:VisualElement>
+</ui:UXML>

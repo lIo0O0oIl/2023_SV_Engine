@@ -21,8 +21,10 @@ public class GameManager : MonoBehaviour
 
         NetworkManager.Instance = new NetworkManager(_host, _port);
 
-        Token = PlayerPrefs.GetString(LoginUI.TokenKey, defaultValue:string.Empty);
-        if (string.IsNullOrEmpty(Token))
+        // 토큰 토큰 관룐
+        //Debug.Log("토큰 확인");
+        Token = PlayerPrefs.GetString(LoginUI.TokenKey, string.Empty);
+        if (!string.IsNullOrEmpty(Token))       // ! 이거 안붙인거 때문이야..?
         {
             NetworkManager.Instance.DoAuth();
         }

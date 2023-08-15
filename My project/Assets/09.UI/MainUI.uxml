@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/09.UI/common.uss?fileID=7433441132597879392&amp;guid=f2dd791aa211b0e44bc7c4e2ddfd7a69&amp;type=3#common" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement name="TopBar" style="flex-grow: 0; background-color: rgb(176, 176, 176); flex-basis: 80px; flex-direction: row; justify-content: flex-end; align-items: center; padding-left: 20px; padding-right: 20px;">
+            <ui:Button text="점심메뉴" display-tooltip-when-elided="true" name="LunchBtn" class="btn" />
+            <ui:Button text="인벤토리" display-tooltip-when-elided="true" name="InventoryBtn" class="btn" />
+            <ui:Button text="로그인" display-tooltip-when-elided="true" name="LoginBtn" class="btn" />
+            <ui:VisualElement name="UserInfoPanel" class="widthzero" style="flex-direction: row; transform-origin: right; overflow: hidden; transition-property: width; transition-duration: 0.5s;">
+                <ui:Button text="유저인포" parse-escape-sequences="true" display-tooltip-when-elided="true" name="InfoBtn" class="btn" />
+                <ui:Button text="로그아웃" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LogoutBtn" class="btn red" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Content" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: center; align-items: center;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="MessageContainer" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; bottom: 0; right: 0;" />
+    <ui:VisualElement name="UserPopOver" class="popover">
+        <ui:Label tabindex="-1" text="유저이름" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NameLabel" class="info-label" />
+        <ui:Label tabindex="-1" text="이메일asdasdasdasdasd" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EmailLabel" class="info-label" />
+        <ui:Label tabindex="-1" text="EXP" parse-escape-sequences="true" display-tooltip-when-elided="true" name="EXPLabel" class="info-label" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -90,8 +90,9 @@ public class NetworkManager
         {
             if (type == MessageType.SUCCESS)
             {
-                Debug.Log(json); //즉 내가 토큰을 보유하고 있다면 로그인정보들을 받을 수 있다.
+                //Debug.Log(json); //즉 내가 토큰을 보유하고 있다면 로그인정보들을 받을 수 있다.
                 UserVO user = JsonUtility.FromJson<UserVO>(json);
+                UIController.Instance.SetLogin(user);       // 토큰으로 로그인
             }
         });
     }

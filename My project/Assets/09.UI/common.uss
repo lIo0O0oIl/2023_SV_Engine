@@ -1,0 +1,136 @@
+.btn {
+    background-color: rgb(9, 58, 183);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: rgb(255, 255, 255);
+    border-left-color: rgb(5, 44, 144);
+    border-right-color: rgb(5, 44, 144);
+    border-top-color: rgb(5, 44, 144);
+    border-bottom-color: rgb(5, 44, 144);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+.btn:hover {
+    background-color: rgb(30, 84, 221);
+}
+
+.window {
+    transition-duration: 0.7s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+}
+
+.fade {
+    opacity: 0.1;
+    position: absolute;
+    top: 120%;
+}
+
+.msg {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition-property: translate;
+    transition-duration: 0.5s;
+}
+
+.msg.off {
+    translate: 110% 0;
+    opacity: 0.2;
+}
+
+.red {
+    background-color: rgb(245, 59, 59);
+    border-left-color: rgb(253, 27, 27);
+    border-right-color: rgb(253, 27, 27);
+    border-top-color: rgb(253, 27, 27);
+    border-bottom-color: rgb(253, 27, 27);
+}
+
+.red:hover {
+    background-color: rgb(231, 77, 77);
+}
+
+.widthzero {
+    width: 0;
+}
+
+.info-label {
+    font-size: 20px;
+    -unity-font-style: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.popover {
+    flex-grow: 1;
+    position: absolute;
+    width: 120px;
+    left: 0;
+    top: 0;
+    scale: 1 0;
+    transform-origin: top;
+    transition-property: scale;
+    transition-duration: 0.3s;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-left-color: rgba(77, 102, 219, 0.87);
+    border-right-color: rgba(77, 102, 219, 0.87);
+    border-top-color: rgba(77, 102, 219, 0.87);
+    border-bottom-color: rgba(77, 102, 219, 0.87);
+}
+
+.slot {
+    width: 80px;
+    height: 80px;
+    background-image: url('project://database/Assets/04.Sprites/scifi_inventory01_box.png?fileID=21300000&guid=00b964a71c6f0ae4f8f206d5ca376dd4&type=3#scifi_inventory01_box');
+    -unity-slice-left: 8;
+    -unity-slice-top: 8;
+    -unity-slice-right: 8;
+    -unity-slice-bottom: 8;
+    -unity-slice-scale: 0.7px;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.slot:hover {
+    background-image: url('project://database/Assets/04.Sprites/scifi_inventory02_box_select01.png?fileID=21300000&guid=e7585f30aa72296478490edd0816f72a&type=3#scifi_inventory02_box_select01');
+    -unity-slice-left: 8;
+    -unity-slice-top: 8;
+    -unity-slice-right: 8;
+    -unity-slice-bottom: 8;
+    -unity-slice-scale: 0.7px;
+}
+
+.item {
+    height: 80px;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+}
