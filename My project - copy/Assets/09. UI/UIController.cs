@@ -34,6 +34,8 @@ public class UIController : MonoBehaviour
     private Button _loginBtn;
     private UserInfoPanel _userInfoPanel;
 
+    GameUI gameUI;
+
     private void Awake()
     {
         if (Instance != null)
@@ -91,8 +93,10 @@ public class UIController : MonoBehaviour
         _windowDictionary.Add(Windows.Inven, invenUI);
 
         VisualElement gameRoot = _GameUIAsset.Instantiate().Q<VisualElement>("GameWindow");
+        VisualElement rankingRoot = _GameUIAsset.Instantiate().Q<VisualElement>("RankingWindow");
         _contentParent.Add(gameRoot);
-        GameUI gameUI = new GameUI(gameRoot, TopBarGame);
+        _contentParent.Add(rankingRoot);
+        gameUI = new GameUI(gameRoot, TopBarGame, root, rankingRoot);
         gameUI.Close();
         _windowDictionary.Add(Windows.Game, gameUI);
         #endregion
@@ -134,6 +138,11 @@ public class UIController : MonoBehaviour
         _windowDictionary[Windows.Game].Open();
     }
 
+    public void OnOpenRankingHandle(bool show)
+    {
+        gameUI.OnOpenRankingWindow(show);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) //1번 숫자 누르면 아이템 추가되게
@@ -161,5 +170,11 @@ public class UIController : MonoBehaviour
         _loginBtn.style.display = DisplayStyle.Flex;
         _userInfoPanel.Show(false);
         GameManager.Instance.DestroyToken();
+    }
+
+    // 이벤트로 넣어주기
+    public void ClickBtnClick()
+    {
+        gameUI.Click();
     }
 }

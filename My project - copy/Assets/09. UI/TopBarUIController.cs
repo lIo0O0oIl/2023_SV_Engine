@@ -10,7 +10,7 @@ public class TopBarUIController
     private VisualElement _root, basicPanel;
     private UserInfoPanel _userInfoPanel;
 
-    public Button mainGoBtn;
+    public Button mainGoBtn, rankingBtn;
 
     public TopBarUIController(VisualElement root, VisualElement basic, UserInfoPanel userInfoPanel)
     {
@@ -20,6 +20,11 @@ public class TopBarUIController
 
         mainGoBtn = root.Q<Button>("BackBtn");
         mainGoBtn.RegisterCallback<ClickEvent>(evt => TopBarGameShow(false));
+        mainGoBtn.RegisterCallback<ClickEvent>(evt => UIController.Instance.OnOpenRankingHandle(false)) ;
+
+        rankingBtn = root.Q<Button>("RankingBtn");
+        rankingBtn.RegisterCallback<ClickEvent>(evt => UIController.Instance.OnOpenRankingHandle(true)) ;    // 빅루트로 실행가능함
+
         _userInfoPanel.BackButtonClick(value => TopBarGameShow(value));
     }
 

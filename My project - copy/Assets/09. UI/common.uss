@@ -134,3 +134,7 @@
     height: 80px;
     align-items: center;
 }
+
+.visibility {
+    opacity: 1;
+}

@@ -1,12 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System;
+using UnityEngine;
 
-namespace Assets._01._Scripts.Network
+[Serializable]
+public class RecordVO : PayLoad
 {
-    internal class RecordVO
+    public string name;
+    public int user_id;
+    public int score;
+
+    public string GetJsonString()
     {
+        return JsonUtility.ToJson(this);
+    }
+
+    public string GetQueryString()
+    {
+        return "";
+    }
+
+    public WWWForm GetWWWForm()
+    {
+        var form = new WWWForm();
+        form.AddField("user_id", user_id);
+        form.AddField("score", score);
+        return form;
+    }
+
+    public string ToStringShow()
+    {
+        return $"{name} : {score}";
     }
 }

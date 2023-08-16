@@ -37,8 +37,23 @@ public class GameManager : MonoBehaviour
     }
 
     // 여기부터 게임 관련 코드
-    private void Update()
-    {
+    private ClickBtnMove moveBtn;
 
+    private void Start()
+    {
+        moveBtn = GetComponent<ClickBtnMove>();
     }
+
+    public void ClickStart()
+    {
+        Debug.Log("클릭시작");
+        moveBtn.ClickStart();
+    }
+
+    public void ClickEnd()
+    {
+        moveBtn.ClickEnd();
+        Debug.Log("클릭끝");
+    }
+
 }
