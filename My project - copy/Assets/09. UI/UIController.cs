@@ -10,6 +10,7 @@ public enum Windows
     Lunch = 1,
     Login = 2,
     Inven = 3,
+    Game = 4,
 }
 public class UIController : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private VisualTreeAsset _loginUIAsset; //UI의 프리팹
     [SerializeField] private VisualTreeAsset _invenUIAsset;
     [SerializeField] private VisualTreeAsset _invenItemUIAsset;
+    [SerializeField] private VisualTreeAsset _GameUIAsset;
 
     private UIDocument _uiDocument;
     private VisualElement _contentParent;
@@ -56,8 +58,7 @@ public class UIController : MonoBehaviour
 
         var popOverElem = root.Q<VisualElement>("UserPopOver");
         var userInfoElem = root.Q<VisualElement>("UserInfoPanel");
-        //_userInfoPanel = new UserInfoPanel(userInfoElem, popOverElem, e => SetLogout());
-        _userInfoPanel = new UserInfoPanel(userInfoElem, popOverElem, e => SetLogout());
+        _userInfoPanel = new UserInfoPanel(userInfoElem, popOverElem, e => SetLogout());        // 토큰으로
 
         Button invenBtn = root.Q<Button>("InventoryBtn");
         invenBtn.RegisterCallback<ClickEvent>(OnOpenInvenHandle);
@@ -65,6 +66,8 @@ public class UIController : MonoBehaviour
         var messageContainer = root.Q<VisualElement>("MessageContainer");
         _messageSystem.SetContainer(messageContainer);
 
+        // 게임탑바로 UI 변경하기
+        TopBarUIController TopBarGame = new TopBarUIController(root.Q<VisualElement>("GamePanel"), root.Q<VisualElement>("BasicPanel"), _userInfoPanel);
 
         #region 윈도우 추가하는 부분
         _windowDictionary.Clear();
@@ -87,6 +90,11 @@ public class UIController : MonoBehaviour
         invenUI.Close();
         _windowDictionary.Add(Windows.Inven, invenUI);
 
+        VisualElement gameRoot = _GameUIAsset.Instantiate().Q<VisualElement>("GameWindow");
+        _contentParent.Add(gameRoot);
+        GameUI gameUI = new GameUI(gameRoot, TopBarGame);
+        gameUI.Close();
+        _windowDictionary.Add(Windows.Game, gameUI);
         #endregion
     }
 
@@ -117,6 +125,15 @@ public class UIController : MonoBehaviour
         _windowDictionary[Windows.Inven].Open();
     }
 
+    public void OnOpenGameHandle(ClickEvent evt)
+    {
+        foreach (var kvPair in _windowDictionary)
+        {
+            kvPair.Value.Close();
+        }
+        _windowDictionary[Windows.Game].Open();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) //1번 숫자 누르면 아이템 추가되게
@@ -127,7 +144,6 @@ public class UIController : MonoBehaviour
             inven.AddItem(itemList[idx], 3);
         }
     }
-
 
     public void SetLogin(UserVO user)
     {

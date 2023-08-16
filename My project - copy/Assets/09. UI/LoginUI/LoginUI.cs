@@ -33,7 +33,7 @@ public class LoginUI : WindowUI
             {
                 TokenResponseDTO dto = JsonUtility.FromJson<TokenResponseDTO>(json);
                 PlayerPrefs.SetString(TokenKey, dto.token);
-                Debug.Log(dto.token);
+                //Debug.Log(dto.token);
                 // 로그인 창이 닫히고 위에가 변하도록
                 UIController.Instance.SetLogin(dto.user);
                 Close();

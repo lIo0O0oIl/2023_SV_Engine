@@ -29,7 +29,7 @@
 }
 
 .fade {
-    opacity: 0.1;
+    opacity: 0;
     position: absolute;
     top: 120%;
 }
@@ -65,7 +65,7 @@
 }
 
 .red:hover {
-    background-color: rgb(231, 77, 77);
+    background-color: rgb(255, 119, 71);
 }
 
 .widthzero {

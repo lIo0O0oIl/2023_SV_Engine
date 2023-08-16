@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -40,7 +41,6 @@ public class UserInfoPanel
         {
             UserPopOver.Hide();
         });
-
     }
 
     public void Show(bool value)
@@ -49,5 +49,12 @@ public class UserInfoPanel
             _root.RemoveFromClassList("widthzero");
         else
             _root.AddToClassList("widthzero");
+    }
+
+    public void BackButtonClick(Action<bool> action)
+    {
+        Button gameGoBtn = _root.Q<Button>("GameBtn");
+        gameGoBtn.RegisterCallback<ClickEvent>(evt => action(true));
+        gameGoBtn.RegisterCallback<ClickEvent>(UIController.Instance.OnOpenGameHandle);
     }
 }

@@ -11,7 +11,7 @@ public class ClickGameUI : MonoBehaviour
     private bool _isStart = false;
 
     private UnityEngine.UIElements.Button _clickBtn;
-    [SerializeField] public UnityEngine.UI.Button _clickBtn2;
+    //[SerializeField] public UnityEngine.UI.Button _clickBtn2;
     private Label _scoreLabel;
     private int _score = 0;
 
@@ -29,8 +29,8 @@ public class ClickGameUI : MonoBehaviour
         _timeLabel = root.Q<Label>("TimeLabel");
     }
 
-    //private void Click(ClickEvent evt)
-    public void Click(ClickEvent evt)
+    private void Click(ClickEvent evt)
+    //public void Click(ClickEvent evt)
     {
         if (_isStart && _isTimerStart)
         {
@@ -40,8 +40,8 @@ public class ClickGameUI : MonoBehaviour
         }
     }
 
-    //private IEnumerator GameStart()
-    public IEnumerator GameStart()
+    private IEnumerator GameStart()
+    //public IEnumerator GameStart()
     {
         if (!_isStart)
         {
@@ -81,8 +81,8 @@ public class ClickGameUI : MonoBehaviour
         }
     }
 
-    //private IEnumerator ReStart()
-    public IEnumerator ReStart()
+    private IEnumerator ReStart()
+    //public IEnumerator ReStart()
     {
         if (_isStart && !_isTimerStart)
         {
@@ -92,10 +92,5 @@ public class ClickGameUI : MonoBehaviour
             _time = 10;
             _score = 0;
         }
-    }
-
-    public void he()
-    {
-
     }
 }

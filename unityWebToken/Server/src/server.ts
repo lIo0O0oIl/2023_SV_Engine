@@ -7,6 +7,7 @@ import { tokenChecker } from "./MyJWT";
 import {lunchRouter} from "./lunchRouter";
 import {userRouter} from "./UserRouter";
 import { invenRouter } from "./InventoryRouter";
+import {recordRouter} from "./RecordRouter";
 
 // 익스프레스 어플리케이션 이건 웹서버임
 let app : Application = express();
@@ -26,6 +27,9 @@ app.use(tokenChecker);      // 토큰을 체크한다
 // RestFul API (다 구현한 것. 기본이 되는)
 // 여기서 라우터 에 set 코드가 있었음
 
+// 점수 관련 라우터
+app.use(recordRouter);
+// 인벤토리 라우터
 app.use(invenRouter);
 // 점심관련 라우터
 app.use(lunchRouter);

@@ -331,6 +331,7 @@ MonoBehaviour:
   _loginUIAsset: {fileID: 9197481963319205126, guid: 557c7e299b291644fbd35fabe884777c, type: 3}
   _invenUIAsset: {fileID: 9197481963319205126, guid: 684ddfdbda839d14ca21984b459ab40b, type: 3}
   _invenItemUIAsset: {fileID: 9197481963319205126, guid: 2501a6589024d5a44bb3464c02e00edc, type: 3}
+  _GameUIAsset: {fileID: 9197481963319205126, guid: c994878b54f8aa64e8eadf0af827f93c, type: 3}
 --- !u!114 &1747695504
 MonoBehaviour:
   m_ObjectHideFlags: 0
