@@ -1,11 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/09.%20UI/common.uss?fileID=7433441132597879392&amp;guid=87cede7a11705aa47b5763a36b6370ae&amp;type=3#common" />
     <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-        <ui:VisualElement name="TopBar" style="flex-grow: 0; background-color: rgb(166, 166, 166); flex-basis: 80px; flex-direction: row; align-items: center; justify-content: flex-end; padding-left: 20px; padding-right: 20px;">
-            <ui:Button text="버튼" display-tooltip-when-elided="true" name="JustBtn" class="btn" />
-            <ui:Button text="랭킹" display-tooltip-when-elided="true" name="RankingBtn" class="btn" />
-            <ui:Button text="-&gt;" display-tooltip-when-elided="true" name="BackBtn" class="btn" />
-        </ui:VisualElement>
+        <ui:VisualElement name="TopBar" style="flex-grow: 0; background-color: rgb(166, 166, 166); flex-basis: 80px; flex-direction: row; align-items: center; justify-content: flex-end; padding-left: 20px; padding-right: 20px;" />
         <ui:VisualElement name="Content" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: center; align-items: center;">
             <ui:Button text="Start Here!" display-tooltip-when-elided="true" name="ClickBtn" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 400px; height: 250px; font-size: 50px; -unity-font-style: bold; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" />
             <ui:Label tabindex="-1" text="Score : 00" display-tooltip-when-elided="true" name="ScoreLabel" style="position: absolute; top: 800px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; font-size: 50px; -unity-font-style: bold;" />
