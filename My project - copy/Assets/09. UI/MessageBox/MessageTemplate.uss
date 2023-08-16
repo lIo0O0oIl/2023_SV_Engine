@@ -1,0 +1,21 @@
+.msg {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition-property: translate;
+    transition-duration: 0.5s;
+}
+
+.msg.off {
+    translate: 110% 0;
+    opacity: 0.2;
+}
