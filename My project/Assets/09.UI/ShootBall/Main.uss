@@ -1,7 +1,0 @@
-#StartBtn:hover {
-    background-color: rgb(62, 85, 217);
-}
-
-#StartBtn {
-    background-color: rgb(47, 77, 255);
-}

@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/09.UI/common.uss?fileID=7433441132597879392&amp;guid=f2dd791aa211b0e44bc7c4e2ddfd7a69&amp;type=3#common" />
+    <Style src="project://database/Assets/09.%20UI/common.uss?fileID=7433441132597879392&amp;guid=87cede7a11705aa47b5763a36b6370ae&amp;type=3#common" />
     <ui:VisualElement name="LoginWindow" class="window" style="background-color: rgb(173, 173, 173); width: 500px; height: 230px; padding-left: 20px; padding-right: 20px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
         <ui:Label tabindex="-1" text="로그인" display-tooltip-when-elided="true" style="font-size: 40px; -unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);" />
         <ui:TextField picking-mode="Ignore" label="Email" name="EmailInput" tabindex="1" />
