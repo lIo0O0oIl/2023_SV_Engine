@@ -1,12 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/09.%20UI/common.uss?fileID=7433441132597879392&amp;guid=87cede7a11705aa47b5763a36b6370ae&amp;type=3#common" />
     <ui:VisualElement name="LoginWindow" class="window" style="background-color: rgb(173, 173, 173); width: 500px; height: 230px; padding-left: 20px; padding-right: 20px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
-        <ui:Label tabindex="-1" text="로그인" display-tooltip-when-elided="true" style="font-size: 40px; -unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);" />
+        <ui:Label tabindex="-1" text="로그인" display-tooltip-when-elided="true" style="font-size: 46px; -unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-style: bold; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0); -unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); -unity-font-definition: initial;" />
         <ui:TextField picking-mode="Ignore" label="Email" name="EmailInput" tabindex="1" />
         <ui:TextField picking-mode="Ignore" label="Password" name="PasswordInput" password="true" tabindex="2" />
         <ui:VisualElement name="ButtonRow" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; justify-content: flex-end; align-items: center; margin-top: 20px;">
-            <ui:Button text="로그인" display-tooltip-when-elided="true" name="OkBtn" tabindex="3" class="btn" />
-            <ui:Button text="취소" display-tooltip-when-elided="true" name="CancelBtn" class="btn red" />
+            <ui:Button text="로그인" display-tooltip-when-elided="true" name="OkBtn" tabindex="3" class="btn" style="-unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); -unity-font-definition: initial; font-size: 20px;" />
+            <ui:Button text="취소" display-tooltip-when-elided="true" name="CancelBtn" class="btn red" style="-unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); -unity-font-definition: initial; font-size: 20px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

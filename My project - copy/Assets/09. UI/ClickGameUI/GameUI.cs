@@ -146,7 +146,6 @@ public class GameUI : WindowUI
     {
         if (_isStart && !_isTimerStart)
         {
-            _BigRoot.style.bottom = 0;
 
             yield return new WaitForSeconds(2f);
 
@@ -160,10 +159,12 @@ public class GameUI : WindowUI
             RecordVO vo = new RecordVO { score = _score };
             NetworkManager.Instance.PostRequest("record", vo, (type, json) =>
             {
-                Debug.Log(json);
+                //Debug.Log(json);
+                UIController.Instance.Message.AddMessage(json, 3f);
                 RankingUpdate();
             });
-            // 여기에 시작 버튼을 지워주는 것이 있었음 - 선생님의 코드에선 그럼
+
+            _BigRoot.style.bottom = 0;
 
             _score = 0;
         }

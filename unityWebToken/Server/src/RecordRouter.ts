@@ -21,7 +21,7 @@ recordRouter.get("/record",async (req:Request, res:Response, next:NextFunction) 
 recordRouter.post("/record",async (req:Request, res:Response, next:NextFunction) => {
     if(req.user == null)
     {
-        res.json({type:MessageType.ERROR, message:"권한이 없습니다."});
+        res.json({type:MessageType.ERROR, message:"You do not have permission."});
         return;
     }
     const user = req.user;
@@ -31,5 +31,5 @@ recordRouter.post("/record",async (req:Request, res:Response, next:NextFunction)
 
     await Pool.execute(sql, [user.id, score]);
 
-    res.json({type:MessageType.SUCCESS, message:"기록완료."})
+    res.json({type:MessageType.SUCCESS, message:"Recording complete."})
 });

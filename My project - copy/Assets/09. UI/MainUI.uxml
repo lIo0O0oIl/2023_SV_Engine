@@ -3,17 +3,17 @@
     <ui:VisualElement name="Container" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
         <ui:VisualElement name="TopBar" style="flex-grow: 0; background-color: rgb(166, 166, 166); flex-basis: 80px; flex-direction: row; align-items: center; justify-content: flex-end; padding-left: 20px; padding-right: 20px; visibility: visible; display: flex; transition-duration: 1.5s; transition-timing-function: ease-in-cubic; bottom: 0;">
             <ui:VisualElement name="BasicPanel" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; overflow: hidden; transform-origin: right; transition-property: width; transition-duration: 0.7s;">
-                <ui:Button text="점심메뉴" display-tooltip-when-elided="true" name="LunchBtn" class="btn" />
-                <ui:Button text="인벤토리" display-tooltip-when-elided="true" name="InventoryBtn" class="btn" />
-                <ui:Button text="로그인" display-tooltip-when-elided="true" name="LoginBtn" class="btn" />
+                <ui:Button text="점심메뉴" display-tooltip-when-elided="true" name="LunchBtn" class="btn" style="-unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); -unity-font-definition: initial; font-size: 20px;" />
+                <ui:Button text="인벤토리" display-tooltip-when-elided="true" name="InventoryBtn" class="btn" style="-unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); font-size: 20px; -unity-font-definition: initial;" />
+                <ui:Button text="로그인" display-tooltip-when-elided="true" name="LoginBtn" class="btn" style="-unity-font-definition: initial; -unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); font-size: 20px;" />
             </ui:VisualElement>
             <ui:VisualElement name="UserInfoPanel" class="widthzero" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; transform-origin: right; overflow: hidden; transition-property: width; transition-duration: 0.7s;">
-                <ui:Button text="유저인포" display-tooltip-when-elided="true" name="InfoBtn" class="btn" />
-                <ui:Button text="클릭게임" display-tooltip-when-elided="true" name="GameBtn" class="btn" />
-                <ui:Button text="로그아웃" display-tooltip-when-elided="true" name="LogoutBtn" class="btn red" />
+                <ui:Button text="유저인포" display-tooltip-when-elided="true" name="InfoBtn" class="btn" style="-unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); -unity-font-definition: initial; font-size: 20px;" />
+                <ui:Button text="클릭게임" display-tooltip-when-elided="true" name="GameBtn" class="btn" style="-unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); -unity-font-definition: initial; font-size: 20px;" />
+                <ui:Button text="로그아웃" display-tooltip-when-elided="true" name="LogoutBtn" class="btn red" style="-unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); -unity-font-definition: initial; font-size: 20px;" />
             </ui:VisualElement>
             <ui:VisualElement name="GamePanel" class="widthzero" style="background-color: rgba(0, 0, 0, 0); flex-direction: row; transform-origin: right; overflow: hidden; transition-property: width; transition-duration: 0.7s;">
-                <ui:Button text="순위" display-tooltip-when-elided="true" name="RankingBtn" class="btn" />
+                <ui:Button text="순위" display-tooltip-when-elided="true" name="RankingBtn" class="btn" style="-unity-font: url(&apos;project://database/Assets/04.Sprites/Font/Cafe24Shiningstar.ttf?fileID=12800000&amp;guid=d732ff87c30dfaa49912af0556f505a6&amp;type=3#Cafe24Shiningstar&apos;); -unity-font-definition: initial; font-size: 20px;" />
                 <ui:Button text="-&gt;" display-tooltip-when-elided="true" name="BackBtn" class="btn red" />
             </ui:VisualElement>
         </ui:VisualElement>

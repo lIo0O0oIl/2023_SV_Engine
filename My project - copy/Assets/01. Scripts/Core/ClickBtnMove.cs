@@ -10,7 +10,7 @@ public class ClickBtnMove : MonoBehaviour
     private void Start()
     {
         moveAnim = ClickBtn.GetComponent<Animator>();
-        moveAnim.SetTrigger("isMove");      // 디버그용
+        //moveAnim.SetTrigger("isMove");      // 디버그용
     }
 
     public void ClickStart()
