@@ -7,24 +7,15 @@ public class ClickBtnMove : MonoBehaviour
     [SerializeField] private GameObject ClickBtn;
     private Animator moveAnim;
 
-    [SerializeField] private AudioSource bye, pew;
-
     private void Start()
     {
         moveAnim = ClickBtn.GetComponent<Animator>();
-        moveAnim.SetTrigger("isMove");
+        moveAnim.SetTrigger("isMove");      // 디버그용
     }
 
     public void ClickStart()
     {
         ClickBtn.SetActive(true);
-        StartCoroutine(Move());
-    }
-
-    private IEnumerator Move()
-    {
-        yield return new WaitForSeconds(1f);
-        bye.Play();
         moveAnim.SetTrigger("isMove");
     }
 

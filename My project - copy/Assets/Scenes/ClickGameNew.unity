@@ -475,8 +475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClickBtn: {fileID: 1367311952}
-  bye: {fileID: 0}
-  pew: {fileID: 0}
 --- !u!1 &1367311952
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +488,7 @@ GameObject:
   - component: {fileID: 1367311955}
   - component: {fileID: 1367311954}
   - component: {fileID: 1367311957}
+  - component: {fileID: 1367311958}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -647,6 +646,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1367311958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367311952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7cff68114671c42b8ed67cd0a1e9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bye: {fileID: 1694324421}
+  pew: {fileID: 1102097338}
 --- !u!1 &1471423092
 GameObject:
   m_ObjectHideFlags: 0
