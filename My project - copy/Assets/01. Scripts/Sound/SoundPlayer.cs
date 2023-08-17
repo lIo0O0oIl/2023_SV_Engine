@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundPlayer : MonoBehaviour
 {
-    [SerializeField] private AudioSource bye, pew;
+    [SerializeField] private AudioSource bye, pew, end;
 
     public void SoundByePlay()
     {
@@ -14,5 +14,10 @@ public class SoundPlayer : MonoBehaviour
     public void SoundPewPlay()
     {
         pew.Play();
+    }
+
+    public void SoundEndPlay()
+    {
+        end.Play();
     }
 }
